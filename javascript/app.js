@@ -13,12 +13,17 @@ function displayDaGifs(){
     $.get(queryURL).then(function(parameter){
 
         console.log(parameter);
+        var figureHold ="";
 
         for(var i = 0; i < parameter.data.length; i++){
             
             gifStills.push(parameter.data[i].images.fixed_height_still.url);
-            $("#content").append('<img src=' + parameter.data[i].images.fixed_height_still.url + ' class="rounded mx-2 my-2 generated-gif" width=300px clicked=0 gif-index="' + i + '">');
+            figureHold = $('<figure class="figure mx-2 my-2">')
+            figureHold.append('<img src=' + parameter.data[i].images.fixed_height_still.url + ' class="figure-img rounded generated-gif" width=300px clicked=0 gif-index="' + i + '">');
+            figureHold.append('<figcaption class="figure-caption text-center">Rating: ' + parameter.data[i].rating + '</figcaption>');
+            $("#content").append(figureHold);
             gifAnimations.push(parameter.data[i].images.fixed_height.url);
+            figureHold = null;
         }
 
 
