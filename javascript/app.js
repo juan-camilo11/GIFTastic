@@ -1,4 +1,4 @@
-var gifArray = ["messi","ronaldo","klose","ronaldinho","kaka","ibrahimovic","neymar","iniesta","james rodriguez","marcelo","pele","higuita","bergkamp"];
+var gifArray = ["messi","ronaldo","klose","ronaldinho","kaka","ibrahimovic","neymar","iniesta","james rodriguez","marcelo","pele","higuita","bergkamp","beckenbauer","maradona","rivaldo","thierry henry","puyol","xavi","rooney","sergio ramos"];
 var gifAnimations = [];
 var gifStills = [];
 var extraCounts = 0; //I will use this variable to keep track of how many times the add gifs button is clicked and use it to 
@@ -63,7 +63,7 @@ function displayDaGifs(){
         //stopped here. going to include a button that adds 10 more GIFs under the same category the user is currently on
         //probably going to set counts on how many times this button is pressed in order to pull 10 additional gifs as opposed to just 
         //pulling the same gifs that are already being displayed. Can probably use offset term at the end of queryURL
-        $("#add-more").append('<button type="button" class="btn btn-info mx-2 my-2" data-name=' + daGif + ' id="more-GIFs">See more GIFS</button>');
+        $("#add-more").append('<button type="button" class="btn btn-info my-2" data-name=' + daGif + ' id="more-GIFs">See more GIFS</button>');
 
 
     });
