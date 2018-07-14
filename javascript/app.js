@@ -60,9 +60,7 @@ function displayDaGifs(){
             figureHold = null;
         }
 
-        //stopped here. going to include a button that adds 10 more GIFs under the same category the user is currently on
-        //probably going to set counts on how many times this button is pressed in order to pull 10 additional gifs as opposed to just 
-        //pulling the same gifs that are already being displayed. Can probably use offset term at the end of queryURL
+        
         $("#add-more").append('<button type="button" class="btn btn-info my-2" data-name=' + daGif + ' id="more-GIFs">See more GIFS</button>');
 
 
@@ -110,4 +108,3 @@ $(document).on("click", "#more-GIFs", displayExtraGifs);
 
 setButtons();
 
-//read eloquent javascript
